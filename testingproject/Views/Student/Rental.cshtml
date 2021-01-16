@@ -1,0 +1,76 @@
+﻿@model StudyBolt.Models.Rental
+@{
+    ViewData["Title"] = "Rental";
+    Layout = "_StudentHeader";
+}
+    <link rel="stylesheet" type="text/css" href="~/css/rental.css" />
+
+    <div class="container">
+                <fieldset>
+                    <legend style="text-align:center">Rent a Laptop</legend> 
+                    <p style="text-align:center">Please note that your rental is not confirmed until we finish processing your application.</p>
+                    <form asp-action="Rental" style="text-align:center">
+                        @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
+
+                        <div class="form-group row">
+                            <label asp-for="StudentName"
+                                   class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-9 col-md-5">
+                                <input asp-for="StudentName" class="form-control" required />
+                                <span asp-validation-for="StudentName"
+                                      class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="DateRented"
+                                   class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-9 col-md-5">
+                                <input asp-for="DateRented" class="form-control" required />
+                                <span asp-validation-for="DateRented"
+                                      class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="DateReturn"
+                                   class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-9 col-md-5">
+                                <input asp-for="DateReturn" class="form-control" required />
+                                <span asp-validation-for="DateReturn"
+                                      class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="Reason"
+                                   class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-9 col-md-5">
+                                <input asp-for="Reason" class="form-control" rows="3" required />
+                                <span asp-validation-for="Reason"
+                                      class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label asp-for="Remarks"
+                                   class="col-sm-3 col-form-label"></label>
+                            <div class="col-sm-9 col-md-5">
+                                <input asp-for="Remarks" class="form-control" rows="3" />
+                                <span asp-validation-for="Remarks"
+                                      class="text-danger"></span>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-9 offset-sm-1">
+                                <input type="submit" value="Submit" style="width:60%"
+                                       class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </form>
+                   </fieldset>         
+        </div>
+
+

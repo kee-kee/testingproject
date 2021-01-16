@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewData["Title"] = "Download";
+    Layout = "_StudentHeader";
+}
+
+<link rel="stylesheet" type="text/css" href="~/css/download.css" />
+<body style="background-color:#FFF9EAFF">
+    <div class="row">
+        <div class="col-sm-12" style="align-items:center">
+            <br />
+            <div class="padding">
+                <form asp-action="CustomerHome" asp-controller="Customer">
+                    <div class="container-fluid">
+                        @*<fieldset style="padding:20px; padding-bottom:20px; background-color:white; border-radius:2px; border: 2px solid darkblue;">*@
+                            <h3 style="text-align:center">What are you going to study today?</h3>
+                            <br />
+                            <div class="form-group row">
+                                <label for="cars" class="col-sm-4 col-form-label">Subject:</label>
+                                <select id="cars" name="cars" class="col-sm-8 col-md-3">
+                                    <option value="volvo">English</option>
+                                    <option value="saab">Mathematics</option>
+                                    <option value="fiat">Science</option>
+                                    <option value="audi">Mother Tongue</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="cars" class="col-sm-4 col-form-label">Primary:</label>
+                                <select id="cars" name="cars" class="col-sm-8 col-md-3">
+                                    <option value="volvo">1</option>
+                                    <option value="saab">2</option>
+                                    <option value="fiat">3</option>
+                                    <option value="audi">4</option>
+                                    <option value="fiat">5</option>
+                                    <option value="audi">6</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="cars" class="col-sm-4 col-form-label">Chapter:</label>
+                                <select id="cars" name="cars" class="col-sm-8 col-md-3">
+                                    <option value="volvo">1</option>
+                                    <option value="saab">2</option>
+                                    <option value="fiat">3</option>
+                                    <option value="audi">4</option>
+                                </select>
+                            </div>
+
+
+
+                            @*<div>
+                                    <span style="color:red;">@TempData["FlightMessage"]</span>
+                                </div>*@
+                            <div class="form-group row" style="text-align:center">
+                                <div class="col-sm-9 offset-sm-1">
+                                    <a href="~/Student/Materials" class="btn">Search</a>
+                                </div>
+                            </div>
+                        @*</fieldset>*@
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+

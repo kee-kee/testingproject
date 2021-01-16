@@ -1,0 +1,34 @@
+﻿body {
+}
+
+.navbar {
+    background-color: #e3f2fd;
+}
+
+.modal-content {
+    background-color: lightblue;
+}
+
+.modal-body {
+    font-family: 'Inconsolata', monospace;
+}
+
+.button {
+    border: 2px solid dodgerblue;
+    border-radius: 5px;
+    padding: 5px;
+    width: 50%;
+    background-color: dodgerblue;
+    color: white;
+    font-weight: bold;
+    text-decoration: none ;
+}
+
+.col-form-label {
+    text-align: right;
+    font-weight: bold;
+}
+
+.cursor:hover{
+    cursor:pointer;
+}

@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Display";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+let imageCache = NSCache<AnyObject, AnyObject>
+    ()
+    
+    extension UIImageView {
+    func setImage(from url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+    contentMode = mode
+
+    if let imageFromCache = imageCache.object(forKey: url as AnyObject) {
+    self.image = imageFromCache as? UIImage
+    return
+    }
+
+    URLSession.shared.dataTask(with: url) { data, response, error in
+    guard
+    let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
+    let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
+    let data = data, error == nil,
+    let imageToCache = UIImage(data: data)
+    else { return }
+    DispatchQueue.main.async() {
+    imageCache.setObject(imageToCache, forKey: url as AnyObject)
+    self.image = imageToCache
+    }
+    }.resume()
+    }
+    func setImage(from link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
+    guard let url = URL(string: link) else { return }
+    setImage(from: url, contentMode: mode)
+    }
+    }

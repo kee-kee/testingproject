@@ -1,0 +1,56 @@
+﻿@model testingproject.Models.Student
+
+
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="~/css/registerstudent.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+@{
+    ViewData["Title"] = "RegisterStudent";
+
+}
+
+<body>
+    <div class="main-container row">
+        <div class="main-card col-md-12">
+
+            <form asp-action="Create">
+
+                <div class="row header-container">
+                    <div class="col-sm-12 col-md-auto title-container">
+                        <h1 class="header-title">Register as Student</h1>
+                    </div>
+                </div>
+
+                <fieldset class="loginFieldset">
+
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="form-group">
+                        <label class="control-label">Name</label>
+                        <input asp-for="fullname" class="form-control" placeholder="Name" size="50" />
+                        <span asp-validation-for="fullname" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Email</label>
+                        <input asp-for="email" class="form-control" placeholder="Email Address" size="50" />
+                        <span asp-validation-for="email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">Password</label>
+                        <input type="password" name="Password" id="Password" class="form-control" placeholder="Password" size="50" onchange="validateFieldsNotEmpty()" />
+
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Create New Account" class="btn" id="signup" />
+                    </div>
+
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>

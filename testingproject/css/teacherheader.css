@@ -1,0 +1,22 @@
+﻿/** {
+    font-family: 'Shrikhand', serif
+}
+
+.navbar-custom {
+    background-color: #89CFF0;
+    text-align: center;
+}
+
+.navbar-brand:hover, .navbar-brand:focus {
+    filter: invert(100%);
+    color: black;
+    transition: color 0.3s;
+}
+
+.dropbtn, #signout {
+    background-color: transparent;
+    border: none;
+    font-family: 'Poppins', serif; font-size: 24px;
+    color: black;
+    margin: 0;
+}*/

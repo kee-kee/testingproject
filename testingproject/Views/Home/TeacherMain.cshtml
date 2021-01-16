@@ -1,0 +1,45 @@
+﻿@model testingproject.Models.Teacher
+
+@{
+    ViewData["Title"] = "TeacherMain";
+    Layout = "_TeacherHeader";
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="~/css/teachermain.css" />
+
+
+<!DOCTYPE html>
+<html>
+@*<head>
+
+
+        <meta name="viewport" content="width = device-width, initial-scale = 1" />
+
+        <title>Study Bot</title>
+
+         Reference to customized styling for this website
+    </head>*@
+
+<body style="background-image: url('../images/teacherbackground.jpg')">
+
+    <h1 id="Welcome">WELCOME</h1>
+    <h1>
+        @Html.Display("TeacherName")
+    </h1>
+
+    <div id="btn">
+        <a class="center" id="btnUpload" asp-action="Index" asp-controller="File">
+            UPLOAD
+        </a>
+    </div>
+
+    @*<div id="btn">
+            <a class="center" id="btnUpload" asp-action="ViewUploaded">
+                UPLOAD
+            </a>
+        </div>*@
+
+</body>
+</html>

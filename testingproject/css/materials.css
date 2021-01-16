@@ -1,0 +1,17 @@
+﻿.row{
+    padding-left:20px;
+
+}
+
+.thumbnail {
+    border: solid 0px;
+}
+
+p{
+    text-align:center;
+    padding-right:20px;
+}
+
+body {
+    background-color: #FFF9EAFF;
+}

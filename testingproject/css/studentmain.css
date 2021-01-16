@@ -1,0 +1,13 @@
+﻿body {
+}
+
+/*.caption {
+    text-align: center;
+    font-size: 12px;
+}*/
+
+.caption {
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    font-size: 20px;
+}

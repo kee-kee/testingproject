@@ -1,0 +1,58 @@
+﻿@model IEnumerable<testingproject.Models.Teacher>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.staff_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fullname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.school)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.staff_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fullname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.school)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {id=item.staff_ID}) |
+            @Html.ActionLink("Detail", "Detail", new {id=item.staff_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.staff_ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,16 @@
+﻿body {
+    font-family: 'Inconsolata', monospace;
+    background-image: url('../images/empty2.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(255,255,255,0.6);
+    margin: 0;
+    padding: 0;
+    z-index: -2;
+}
+
+.btn {
+    width: 30%;
+    height: 40px;
+    background-color: dodgerblue;
+}
